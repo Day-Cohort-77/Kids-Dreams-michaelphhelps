@@ -35,10 +35,17 @@ Make sure your Developer Tools are open at all times while working on this proje
 Before you click the "Complete Assessment" button on the Learning Platform, add your answers below each question and make a commit.
 
 1. When a child is clicked on in the browser, which module contains the code that will execute on that event happening? Can you explain the algorithm of that logic?
-   > Your answer here
+
+   > The Kids.js module contains the code that has the event listener in it. The reason we keep the event listener within the Kids.js module is because we are assigning the data attributes of the html within that module, and for clarity it makes sense to call them within the same module. The algorithm is initializing the event listener with an if statement checking if the type is "child", and if its true, a window alert of the click event target's dataset of name and one of their wish.
+
 2. In the **Pairings** module, why must the `findCelebrityMatch()` function be invoked inside the `for..of` loop that iterates the kids array?
-   > Your answer here
+
+   > The findCelebrityMatch function is invoked within the loop because we can then set one of our arguments to be a single kid to check against the id of a celebrity within the mentioned function to check for primary and foreign key matches.
+
 3. In the **CelebrityList** module, can you describe how the name of the sport that the celebrity plays can be displayed in the window alert text?
-   > Your answer here
+
+   > The name of the celebrities sport can be displayed in the window alert by storing the state of that celebrity's sport within the html. we then call that state within oir event listener with the line ofo event.target.dataset.sport
+
 4. Can you describe, in detail, the algorithm that is in the `main` module?
-   > Your answer here
+
+   > We first import our functions from each of the modules handling the html generation for each kid, celebrity and pairing of the two, then intialize a variable to select the container id within our index.html module  (mainContainer) , then create our generic HTML that we will be invoking each import within. we then set the variable (applicationHTML) that contains that html to the innerHTML data attribute of our mainContainer querySelector.
